@@ -1,0 +1,46 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@stomp/stompjs": "^7.1.1",
+    "@tailwindcss/vite": "^4.1.12",
+    "axios": "^1.11.0",
+    "canvas-confetti": "^1.9.4",
+    "framer-motion": "^12.33.0",
+    "html2canvas": "^1.4.1",
+    "lucide-react": "^0.541.0",
+    "prop-types": "^15.8.1",
+    "react": "^19.1.1",
+    "react-countup": "^6.5.3",
+    "react-dom": "^19.1.1",
+    "react-hot-toast": "^2.6.0",
+    "react-is": "^19.2.4",
+    "react-qr-code": "^2.0.18",
+    "react-router-dom": "^7.8.2",
+    "react-tilt": "^1.0.2",
+    "recharts": "^3.7.0",
+    "sockjs-client": "^1.6.1",
+    "stompjs": "^2.3.3",
+    "tailwindcss": "^4.1.12",
+    "universal-cookie": "^8.0.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "vite": "^7.1.6"
+  }
+}
