@@ -45,9 +45,11 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
         // This registers the "/ws" endpoint, enabling SockJS fallback options.
         // SockJS is used when the browser does not support WebSockets directly.
         registry.addEndpoint("/ws")
-                .setAllowedOrigins(
+                .setAllowedOriginPatterns(
                     "http://localhost:5173",
-                    "https://your-vercel-app.vercel.app"
+                    "https://*.vercel.app",
+                    "https://*.onrender.com",
+                    frontendUrl
                 )
                 .withSockJS();
     }

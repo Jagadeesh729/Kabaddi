@@ -67,11 +67,12 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
 
-        configuration.setAllowedOrigins(Arrays.asList(
+        configuration.setAllowedOriginPatterns(Arrays.asList(
                 frontendUrl, // http://localhost:5173
                 "http://localhost:5173",
                 "http://127.0.0.1:5173",
-                "https://your-vercel-app.vercel.app" // deployed vercel site
+                "https://*.vercel.app", // Allow all vercel deployment URLs
+                "https://*.onrender.com"
         ));
 
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
