@@ -587,10 +587,13 @@ const FanZone = ({ match }) => {
                                     <div className="flex-1 relative group">
                                         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur opacity-0 group-hover:opacity-100 transition duration-500"></div>
                                         <input
+                                            id="chat-message-input"
+                                            name="chatMessage"
                                             type="text"
                                             value={newMessage}
                                             onChange={(e) => setNewMessage(e.target.value)}
                                             placeholder="Type a message..."
+                                            autoComplete="off"
                                             className="w-full bg-black/40 border border-white/10 rounded-full pl-5 pr-24 py-3.5 text-white focus:ring-2 focus:ring-blue-500/50 outline-none placeholder-gray-500 transition-all font-inter text-sm shadow-inner relative z-10"
                                         />
 
