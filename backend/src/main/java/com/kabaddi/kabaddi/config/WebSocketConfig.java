@@ -81,18 +81,8 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
                     // This allows public score view to work.
                 }
 
-                if (accessor != null && StompCommand.SUBSCRIBE.equals(accessor.getCommand())) {
-                    String destination = accessor.getDestination();
-                    if (destination != null) {
-                        // Require authentication only for chat
-                        if (destination.startsWith("/topic/chat/")) {
-                            if (accessor.getUser() == null) {
-                                System.out.println("[WS Interceptor] Blocked SUBSCRIBE to " + destination + " (No User)");
-                                throw new MessageDeliveryException("Unauthorized: Chat subscription requires authentication");
-                            }
-                        }
-                    }
-                }
+                // Allow all SUBSCRIBE commands regardless of auth state, 
+                // as FanZone allows guest access to chat viewing.
                 return message;
             }
         });
